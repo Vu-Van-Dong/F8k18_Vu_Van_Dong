@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Xin chào!</h1>
+    <button onclick="alert('Nhấn nút!')">Nhấn</button>
+</body>
+</html>
