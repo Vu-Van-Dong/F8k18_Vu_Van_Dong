@@ -1,10 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Demo</title>
-</head>
-<body>
-    <h1>Xin chào!</h1>
-    <button onclick="alert('Nhấn nút!')">Nhấn</button>
-</body>
-</html>
+
+ve cau tao
+    - the du : co day du the  dong va the mo
+    - the rong: khong co the dong
+
+ve tinh chat
+    - block
+        exp: div
+        la 1 block chiem toan bo viewport
+    - inline
+        exp: span
+        dung den dau chiem den day-> neu dai hon viewport thi se xuog dong
+
+    - inline block
+SEO:
+    - Ngu nghia
+    div, span khong co nghia gi ve seo
+div:
+    khong cos y nghia vef SEO , khong co ngu nghia
+    ggom nhom cac thanh phan lai voi nhau
+
+span:
+    khong co ngu nghia
+
+
+heading
+    h1,h1,h3....
+    dung de nhan manh thog tin
+        h1: manh nhat, ,moi page chi nen co 1 h1
+        co the co nhieu h2,3,4,5,..
+        khong duoc nhay coc tu h1->h3......
+
+
+p: la the block , du dung de trien khai doan van ban
+
+br:
+    - xuong dong, la the inline , khong co ngu nghia
+
+img:
+    the rong
+    dung de hien thi hinh anh
+    -src: duong dan
+    - width: chieu rong anh
+    - height : chieu cao anh
+    - title: tieu de anh
+
+
+
+------Buoi 4---------------
+
+
+img :
+    - khoảng trắng phải trái _ trên dưới
+    do img là inline
+
+ - đường đẫn tương đối -tuyệt đối
+
+thẻ a:
+    - thẻ điều hớng
+    attribute:
+        href: resquired
+    - thẻ inline
+    - la con trực tiếp.
+    <p>
+        <span>
+            <a> </a>    là ather cháu
+        </span>
+    </p>
+
+thẻ ul: hiển thị danh sách, là thẻ block
+    li: phần tử trong danh sách
+
+thẻ ol <li>: thẻ sắp xếp ,là thet block
+
+
+
