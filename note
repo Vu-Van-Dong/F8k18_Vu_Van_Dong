@@ -72,5 +72,25 @@ thẻ ul: hiển thị danh sách, là thẻ block
 
 thẻ ol <li>: thẻ sắp xếp ,là thet block
 
+.....................................................................
+
+buổi 5
+
+table: Bảng
+    Hàng tr:table row
+    cột td:table data
+    border="1" cellpadding="0" width="100%"
+    algin: centre, left,right
+    colspan: gộp cột
+    rowspan: gộp hàng
 
 
+..............................................
+buổi 6 (buổi tới )
+    priter
+
+    form/input
+
+buổi 7
+
+    test
