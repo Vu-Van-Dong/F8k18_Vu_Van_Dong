@@ -87,9 +87,40 @@ table: Bảng
 
 ..............................................
 buổi 6 (buổi tới )
-    priter
+    priter: khi xuoongs dòng nó sẽ xuống dòng
+    theo
 
-    form/input
+    input:
+        - name: ten cua input
+        - placeholder: gợi ý nhập cái gì
+        - type "pasword " hiển thị * thay vì giá trị thô không có bảo mật
+               text: type mặc đinh
+               number: nhap so
+               email: nhap email, check @
+               submit: nut bam ,khi bam vao day se day di
+
+    form:
+        -menthod: Phuowng thuc(get/put/post/patch)
+        - action: hanh dong
+
+        điều kiện:
+            - thẻ form phải có action + menthod: neis khong truyền method -> mặc định là GET
+            - input type là submit
+       Hành động:
+            - khi bấm nút thì dữ liệu sẽ được gửi đến link trtong action với method được định nghĩa
+            - Get: Dữ liệu được gửi qua url->  bị limit  và kém bảo mật
+            - post /put/patch: dữ liệu không qua url
+    select -option
+            - hiển thị 1 danh sách chọn sẵn
+            - nêu thẻ option không có value sẽ là tẽ hiển thị trong thẻ option
+            - neu có value thì hiển thị dữ liệu trong value vc
+
+
+     CSS:
+        - Tất cả các thẻ html đều có css mặc định
+        - có 3 cách viết css
+              + inline css: viết trong attribute style
+
 
 buổi 7
 
