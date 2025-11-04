@@ -125,3 +125,80 @@ buổi 6 (buổi tới )
 buổi 7
 
     test
+
+
+
+    ----------------------------------------CSS--------------------
+   Buổi 8 -04-11-2025
+
+
+   Cú pháp gọi CSS
+        - .class : dùng đề gọi bằng class
+        -#id : dùng để gọi bằng id
+           - CSs lam đẹp cho trabg web
+            có 3 cahs viết css
+                - inline css: viết trong attibuti của html
+                - internal: viết  vào trong cấp thẻ style
+                - external: viết vào file css bên ngoài
+
+                selector{s
+                    css code
+                }
+
+  celecter có thể là thẻ (h1, h2,h3/...)
+        - có thể là tên thẻ (h1, h2,h3)
+        - id : mã định danh
+        - class: lớp
+
+        dộ bao phủ:tên thẻ >class>id
+        đôj ưu tiên : id > class > tên thẻ
+        đôj ưu tiên : id > class > tên thẻ
+
+
+
+                style của 1 thẻ ảnh hưởng bởi nhiêu chỗ
+                    - inline\
+                    - intrernal
+                    - external
+                Mức độ ảnh hưởng sẽ tỉ lệ nghịch với độ bao phủ]
+                -> độ ưu tiên:
+                    inline >internal >external
+                -> độ bao phủ
+                     external > internal > inline
+
+
+                - .parent ul -> tất cả các thẻ con/ chau/chat .... đều bị ảnh hưởng
+                -  .parent > ul -> vhit các thẻ con trực tiếp mới bị ảnh hưởng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
