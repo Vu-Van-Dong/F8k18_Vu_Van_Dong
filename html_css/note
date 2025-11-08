@@ -175,18 +175,44 @@ buổi 7
 
 
 
+-------------------------------------------------------------------------------------
+
+Buooir 9  selector
+
+h1,p{
+    color: reb
+}
+->h&p co cung css
+
+h+p: p đứnh cạnh h
+
+h1 ~ p: p đứng sau h và cùng cấp với h
+
+ut[name="name"]{
+    color: red;
+}: nhúng css có "name " là name
 
 
+đê bài:
+    có 1 raido btn đỏ,green,yaloow
+    <p> đoạn văn
+    check red ->tẽx đỏ
+    check green ->green texx
+
+accent-color: red; để cho nút checkbok màu đỏi
+
+em: là đơn viđo độ  % của font-size của phần tử cha
+rem: đơn vị đo độ % của font-sze của phần tư html
 
 
+-------------------------------
+Backgroug:
 
 
+-----Buoi 10---------------11/11/2025---------------------
 
-
-
-
-
-
+firt child ; last-child, nth-child , nth-of type
+padding,margin,border
 
 
 

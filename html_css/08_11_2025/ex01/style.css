@@ -1,0 +1,42 @@
+/*h1,p{*/
+/*    color: red;*/
+
+/*}*/
+
+/*h1+p{*/
+/*    color: red;*/
+/*}*/
+
+h1 ~ p{
+    color: red;
+}
+
+input[name="name"]{
+    color: red;
+}
+
+
+input[name='mode']:checked~p{
+    color: red;
+}
+
+/*input[id='nut1']:checked ~p{*/
+/*    color: red;*/
+/*}*/
+/*input[id='nut2']:checked ~p{*/
+/*    color: green;*/
+/*}*/
+/*input[id='nut3']:checked {*/
+/*    accent-color: red;;*/
+/*}*/
+
+#nut1:checked ~p{
+    color: red;
+}
+#nut2:checked ~p{
+    color: green;
+}
+#nut3:checked ~p{
+    color: yellow;
+}
+
