@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Document</title>
+	</head>
+	
+	<style>
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		/*trỏ vào thẻ li đầu */
+		ul li:first-child{
+			background-color: red;
+		}
+		/*trỏ vài thẻ li cuoois */
+		ul li:last-child{
+			background-color: lightgray;
+		}
+		/*tro vao thẻ li số 2*/
+		ul li:nth-child(2){
+			background-color: lightgray;
+		}
+		/*Check ther con laf thẻ li số 4 bỏ qua các thẻ khác the li */
+		ul li:nth-of-type(4){
+			background-color: #62e32f;
+		}
+		ul li:last-of-type{
+			background-color: aqua;
+		}
+	</style>
+	<body>
+		
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Product</a></li>
+			<li><a href="#">About</a></li>
+			<div></div>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Jobs</a></li>
+			
+			
+		</ul>
+		
+	</body>
+</html>

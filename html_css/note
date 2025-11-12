@@ -204,6 +204,11 @@ accent-color: red; để cho nút checkbok màu đỏi
 em: là đơn viđo độ  % của font-size của phần tử cha
 rem: đơn vị đo độ % của font-sze của phần tư html
 
+ - background-repeat: no-repeat; cho anhr không hiển thị lặp lại
+   - background-position: 100px 100px ; Căn chỉnh độ lớn  hình ành
+   - background-size: contain; css chiều cao hình ảnh
+  -  background-size: cover ;lấy theo chiều dọc bỏ chieeuuf cao
+   -
 
 -------------------------------
 Backgroug:
@@ -214,7 +219,15 @@ Backgroug:
 firt child ; last-child, nth-child , nth-of type
 padding,margin,border
 
+- background= padding + boder
 
+- Cavs thẻ luôn có các thành phần
+    + conten:
+    +boder: bocj ngoài conten
+    + padding:phần đệm nằm giữa conten & boder
+    	padding: 20px 30px 40px 50px: viết theo thứ tự:trên phải dưới trái
+    	+ kjhoong nhận số âm
+    + margin:nằm ngoài boder, khoangr cách giữa các border.( viết theo thư tự tuiwng tự nhứ padding )
 
 
 
