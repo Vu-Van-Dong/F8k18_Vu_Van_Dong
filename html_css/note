@@ -232,11 +232,30 @@ padding,margin,border
 
 
 
+----------------------Buoo11------15-11-2025
 
 
+- text-align: center ->áp dungk cho những phần tử có tenten còn dư để text căn vào giữa
+
+- box-sizing:
+    conten-box: with = conten + padding +boder
+        -> tại vì conten và padding nàm bên trog border
 
 
+reset lai CSS để code được chuẩn nhất
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+- object-fit::
+        + fill: là mặc định ,resizi
+        + cover:
+                - khi width img lowns hơn with của ảnh gốc thì ảnh tự sacle ngang , chiêu cao bị thùa sẽ ẩn đi.
+                - Khi width của thẻ img nhỏ hơn width của ảnh gốc thì chiều ngang bị thừa ẩn đi, chiều cao dữ nguyên.
+        + contain:
+                - luôn giữ chiều nganng
 
 
 
