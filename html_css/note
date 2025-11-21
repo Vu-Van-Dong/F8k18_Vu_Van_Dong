@@ -258,5 +258,41 @@ reset lai CSS để code được chuẩn nhất
                 - luôn giữ chiều nganng
 
 
+----------------Buooi12-------- 18-11-2025
 
 
+#o
+#--- thuoọc tính diplay
+    - Thay đổi các hiển thị của 1 thẻ html
+    - Các giá trị phổ biến
+
+    *visibility: hidden; aanr phần từ(không mất không gian )
+    * none --> ẩn phần tử (Mất không gian chứa )
+    *block ->
+    *inline-block: cos thẻ xét được magin bodder trên dưới
+
+ # thuoocj tinh position
+  - mặc định : các phần tử sâp xếp từ trên xuống dưới ( nếu là block ), từ trái qua phai nếu là inline
+  - position : can thieeph để di chuyển các phần tử sang  các vị trí khác
+
+
+  - cacs loại position
+      + static : mặc định
+      + relative : tương đối
+      + absolute : tyteetj đối
+      + fixed : cố ddih (khi kéo thanh chuiytoj )
+  - các thuộc tính
+        + position?: static,relative.+,absolute ,fixed
+       + top
+        + left
+        + right
+        + bottom
+        + z-index: thứ tự sawos xếp khi ghi đè
+        + inset
+
+        * hamf tính toán cacl (100% - 105px )
+        * tuowng đối với vị trí ban đầu.
+        *absolute : mặc định nhận body làm cha
+            - dungf  position: relative vào thẻ cha gần nhất không phải static thì sẽ dùng đươc    position: absolute; vào thẻ cha gần nhất
+        *fixed: - chỉ nhận body làm cha , ngoài ra không nhận bất kì thành phần nào khấc.
+        *inset: đại diện cho 4 giá trị trên dưới trái phải

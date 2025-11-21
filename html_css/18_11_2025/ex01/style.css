@@ -1,0 +1,19 @@
+
+.boxx{
+    /*display: none;*/
+    /*visibility: hidden;*/
+    display: block;
+}
+span{
+    display: inline-block;
+    border: 1px solid red;
+    width: 100px;
+    /*height: 100px;*/
+    padding-block: 10px;
+    margin-block: 10px;
+}
+
+div{
+    display: none;
+    border: 1px solid blue;
+}
