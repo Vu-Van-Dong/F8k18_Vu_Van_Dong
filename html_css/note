@@ -292,7 +292,7 @@ reset lai CSS để code được chuẩn nhất
 
         * hamf tính toán cacl (100% - 105px )
         * tuowng đối với vị trí ban đầu.
-        *absolute : mặc định nhận body làm cha
+        *absolute : mặc định nhận body làm cha, text đến đâu chiếm đến đấy( mang tính inlien- block )
             - dungf  position: relative vào thẻ cha gần nhất không phải static thì sẽ dùng đươc    position: absolute; vào thẻ cha gần nhất
         *fixed: - chỉ nhận body làm cha , ngoài ra không nhận bất kì thành phần nào khấc.
         *inset: đại diện cho 4 giá trị trên dưới trái phải
