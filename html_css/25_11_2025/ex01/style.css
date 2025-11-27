@@ -1,0 +1,86 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+.expand-panel{
+    margin: 10px auto;
+    width: 600px;
+}
+.expand-title{
+    background-color: rgba(192, 150, 202, 0.51);
+    width: 600px;
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.expand-icon{
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    color: #b30909;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.expand-icon::before{
+    content: "-";
+}
+.expand-content{
+    padding: 16px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+}
+.expand-content{
+    display: none;
+    background-color: rgba(159, 117, 191, 0.18);
+    padding: 16px;
+}
+
+.expand-content{
+    display: none;
+}
+.expand-title:hover{
+    background-color: rgb(192, 150, 202);
+    cursor: pointer;
+}
+
+.expand-panel input[id="expand-panel-01"]:checked ~ .expand-content{
+    display: block;
+}
+
+.expand-panel input[type="checkbox"]:checked ~ label .expand-title{
+    border-radius: 8px 8px 0 0;
+}
+.expand-panel input[type="checkbox"]:checked ~ label .expand-icon::before{
+    content: "+";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
