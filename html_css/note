@@ -296,3 +296,54 @@ reset lai CSS để code được chuẩn nhất
             - dungf  position: relative vào thẻ cha gần nhất không phải static thì sẽ dùng đươc    position: absolute; vào thẻ cha gần nhất
         *fixed: - chỉ nhận body làm cha , ngoài ra không nhận bất kì thành phần nào khấc.
         *inset: đại diện cho 4 giá trị trên dưới trái phải
+
+
+=======================================================
+buổi 15 ===29-11-2025
+
+display: flex
+--> css cho thẻ cha khác thẻ inline block (Css )
+ flex-direction: mặc định là row
+- Nếu flex-direction: row : thì trục chính là từ trái sang phải (trục x )
+- Nếu flex-direction: colum  : thì trục chính là từ trên xuống  (trục y )
+- Nếu flex-direction: row-reverse   : thì trục chính là từ phải sang trái   (trục x  )
+- Nếu flex-direction: colum- reverse    : thì trục chính là từ dưới lên trên   (trục y   )
+
+
+
+--justify-content: dungf để căn trái phải , giữa: Căn theo trục main
+         +space-between: căn giữa và có khoảng trống giữa các thẻ
+         + pace-around: chia bố cục thành N phần  =số thẻ và cho thẻ đỏ nằm vào giữa , còn lại là khoảng trắng
+         + space-evenly: thẻ vào giữa , bên ngoài là các phần ô trắng bằng nhau
+
+
+
+----align-items: center;để căn chính thẻ trên dưới phải trái căn theo trục phụ (cross axits )
+
+---flex-wrap: wrap;xuống dòng khi co vieswposst  lại
+
+
+---flex-shrink: co hieenr thị
+     +flex-shrink: 0 : kjoong cho co lại
+     +flex-shrink: 1 : cho co lại ưu tiên.
+     +flex-shrink: 2: cho co lại bằng 1/2 những các cùng cấp
+
+---flex-grow: giãn hiển thị
+    +flex-grow: 2: gaaps đôi flex-grow:1
+
+
+
+----Chú ý :
+        + flex-shrink: viết trong các thẻ con , chp phép các phần từ có được co lại hay không
+        +flex-g viết trobg các thẻ con , cho phép các phần tử cps được dãn ra hay không
+        +flex-grow +flex-shrink:  ưu tiên cao hơn width
+
+
+
+
+
+
+
+
+
+
