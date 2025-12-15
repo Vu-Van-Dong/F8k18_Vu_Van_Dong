@@ -1,0 +1,77 @@
+
+header {
+    margin: 20px 30px;
+
+}
+
+.header-bottom-control a{
+    text-decoration: none;
+    color: #262626;
+    font-size:18px ;
+    font-weight: 400;
+    padding: 14px 24px 14px 24px;
+
+}
+.header-bottom-control li:hover{
+    background-color: #F1F1F3;
+    border-radius: 10px;
+}
+#header-top span a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size:18px ;
+    font-weight: 400;
+
+}
+#header-top{
+    background-color: #FF9500;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#header-top img{
+    margin-left: 23px;
+}
+
+#header-logo{
+    background-image: url("./img/logo.svg");
+    background-color: #FF9500;
+    height: 54px;
+    width: 54px;
+/*// không lặp lại//*/
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    background-position: center; // Căn ảnh vào giữa
+
+
+}
+#header-bottom{
+    width: 1600px;
+
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #F1F1F3;
+}
+#header-bottom ul{
+    display: flex;
+}
+#header-bottom ul li{
+    list-style: none;
+    padding: 14px 24px;
+}
+#header-bottom div{
+    display: flex;
+    align-items: center;
+}
+#header-bottom nav{
+    margin-left: 50px;
+}

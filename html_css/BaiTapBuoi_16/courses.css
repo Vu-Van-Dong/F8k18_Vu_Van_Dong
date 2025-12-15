@@ -1,0 +1,552 @@
+
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+    /*gap:80px;*/
+}
+
+/* --- SECTION COURSES --- */
+#Courses {
+    /*background-color: #fafafa; !* giống UI mẫu *!*/
+    padding: 60px 0;
+    text-align: center;
+
+}
+
+/* khối chứa toàn bộ items */
+.Courses ,.Testimonials-conten{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* quan trọng */
+    gap: 30px; /* khoảng cách */
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* mỗi thẻ course */
+.Courses-item ,.Testimonials-item{
+    width: 783px;
+    /*width: calc(50% - 30px); !* để 2 item chia đều 1 hàng *!*/
+    background-color: #FFFFFF;
+    padding: 50px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    gap: 30px;
+    border: 1px solid #F1F1F3;
+    flex-direction: column;
+
+
+}
+
+/* ảnh khóa học */
+.Courses-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+/* nội dung */
+.Courses-conten{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* cho nội dung căn trái giống UI */
+    gap: 30px;
+    position: relative;
+}
+.Courses-item-center{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 683px;
+    height: 43px;
+
+}
+
+.Courses-item-center span:nth-child(1),
+.Courses-item-center span:nth-child(2){
+    padding:10px 16px 10px 16px ;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-right: 10px;
+    border: 1px solid #F1F1F3;
+}
+.Courses-item-center span:nth-child(3){
+    color:#262626;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+.Courses-item-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    position: relative;
+    width: 683px;
+
+}
+.Courses-item-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#F7F7F8;
+    width: 683px;
+    padding: 18px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #262626;
+
+}
+.Courses-conten a:hover{
+    background-color: #9a9898;
+}
+
+
+
+/*==============Our Testimonials========================*/
+
+.Testimonials-item{
+    padding: 0;
+}
+/* Nội dung text */
+.Testimonials-item p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #4C4C4D;
+    text-align: left;
+    padding: 50px;
+
+}
+
+/* Tác giả */
+.item-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    width: 100%;
+    background-color: #FCFCFD;
+}
+.item-author-img {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+
+}
+
+.item-author-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.item-author-img a {
+    position: absolute;  /* Ghim nút ở bên phải */
+    right: 0;
+    padding: 18px 24px;
+    background-color: #F7F7F8;
+    color: #262626;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    cursor: pointer;
+
+}
+
+.item-author-img a:hover {
+    background-color: rgba(92, 87, 87, 0.81);
+}
+/*===================Phaan  đầu của Pricing*/
+.benefits-heading{
+    position: relative;
+}
+/*.benefits-heading .content-top-text{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    width: 1025px;*/
+
+/*}*/
+.benefits-heading .heading-top-btn{
+    display: flex;
+    position: absolute;
+    padding: 12px;
+    bottom: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+}
+.heading-top-btn a {
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.heading-top-btn a:first-child{
+    background-color: #FF9500;
+    color:#FFFFFF ;
+}
+.heading-top-btn a:last-child{
+    background-color: #ffffff;
+    color:#4C4C4D;
+}
+
+
+
+
+/*=========pricing-content================*/
+.pricing-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* quan trọng */
+    gap: 30px; /* khoảng cách */
+    max-width: 1600px;
+    width: 100%;
+    padding: 80px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+
+}
+
+
+.pricing-item{
+    width: 703px;
+    /*width: calc(50% - 30px); !* để 2 item chia đều 1 hàng *!*/
+    background-color: #FCFCFD;
+    padding: 50px 30px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 50px;
+    border: 1px solid #F1F1F3;
+    flex-direction: column;
+}
+.pricing-item>span  {
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: 1px solid #F1F1F3;
+    background-color: #FFF9F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 643px;
+    font-size: 22px;
+    color: #262626;
+    font-weight: 500;
+}
+.pricing-item .pricing-item-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 643px;
+    height: 58px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4C4C4D;
+}
+.pricing-item-heading>span>strong{
+    color: #262626;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.pricing-conten-text >span{
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.pricing-conten-text .conten-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 643px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4C4C4D;
+    gap: 20px;
+    position: relative;
+    padding: 0 30px 0 30px;
+    border: 1px solid #F1F1F3;
+    border-top-left-radius:14px ;
+    border-top-right-radius:14px ;
+}
+.pricing-conten-text >a{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FF9500;
+    padding: 20px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+.pricing-conten-text .conten-text .text{
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: flex-start;
+    width: 503px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4C4C4D;
+    padding: 14px;
+    background-color: #F1F1F3;
+    border-radius: 8px ;
+    gap:12px;
+    border: 1px solid #F1F1F3;
+    position: relative;
+
+}
+.pricing-conten-text .conten-text .text img{
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: #FFF4E5;
+    background-position: center;
+    padding:6px ;
+}
+
+
+
+
+
+
+/*=========================Frequently===============*/
+
+
+.Frequently{
+    display: flex;
+    background-color: white;
+    margin-top: 150px;
+    border-radius: 12px;
+    padding: 100px;
+    position: relative;
+
+}
+
+.Frequently-heading{
+    max-width: 408px;
+    width: 100%;
+    height: 293px;
+
+
+}
+.Frequently-heading h2{
+    color: #262626;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Frequently-heading p{
+    color: #4C4C4D;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+}
+.Frequently-heading a{
+    padding: 18px 24px;
+    color: #262626;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+.Frequently-content-item{
+    width: 867px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    /*padding: 50px;*/
+    border: 1px solid #F1F1F3;
+    border-radius: 12px;
+    background-color: white;
+
+
+}
+
+.Frequently-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 867px;
+    gap: 30px;
+     position: relative;
+    /* top:100px;           BỎ */
+    /* right: 100px;        BỎ */
+    margin-left: auto;   /* nếu bạn muốn dồn sang phải */
+}
+
+
+/*.Frequently-item-title*/
+.Frequently-content-item label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* mọi thứ về trái */
+    gap: 100px;
+    padding: 30px 50px;
+    border-radius: 12px;
+    border: 1px solid #F1F1F3;
+    width: 100%;
+    position: relative;
+}
+
+.Frequently-item-title span{
+    font-size: 20px;
+    font-weight: 500;
+}
+/*.Frequently-item-title span:last-child{*/
+/*    width: 52px;*/
+/*    height: 52px;*/
+/*    padding: 12px;*/
+/*    border-radius: 8px;*/
+/*    background-color: #FFF4E5;*/
+/*    cursor: pointer;*/
+/*    position: relative;*/
+/*}*/
+.Frequently-item-title .Frequently-item-title-icon-flex>img{
+    width: 52px;
+    height: 52px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: #FFF4E5;
+    cursor: pointer;
+    /*display: none;*/
+    position: absolute;
+    top:17px;
+    right:50px;
+
+}
+.Frequently-item-title .Frequently-item-title-icon-none>img,.Frequently-item-conten-heading-bottom span>img{
+    width: 52px;
+    height: 52px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: #FFF4E5;
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    right:0;
+    display: none;
+
+}
+.Frequently-item-conten p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    color: #4C4C4D;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 50px;
+
+}
+.Frequently-item-conten-heading-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 767px;
+    height: 96px;
+    text-align: left;
+    color: #4C4C4D;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    background-color: #F7F7F8;
+    position: relative;
+
+
+}
+.Frequently-item-conten-heading-bottom .Frequently-item-conten-icon>img{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
+.Frequently-item-conten{
+    display: none;
+}
+
+
+
+/* Ẩn icon dấu X ban đầu */
+.Frequently-item-title .Frequently-item-title-icon-none > img {
+    display: none;
+}
+
+/* Khi checkbox được checked → đổi icon */
+.Frequently-check:checked ~ label .Frequently-item-title-icon-flex > img {
+    display: none;
+}
+
+.Frequently-check:checked ~ label .Frequently-item-title-icon-none > img {
+    display: block;
+}
+
+/* Ẩn nội dung FAQ ban đầu */
+.Frequently-item-conten {
+    display: none;
+}
+
+/* Khi checkbox checked → hiển nội dung */
+.Frequently-check:checked ~ .Frequently-item-conten {
+    display: block;
+    padding: 30px 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
