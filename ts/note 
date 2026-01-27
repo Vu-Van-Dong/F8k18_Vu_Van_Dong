@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+
+
+- OOP:
+    - TINHS KẾ THỪA
+    - TÍNH ĐA HÌNH
+    - TÍNH ĐÓNG GÓI
+    - TÍNH TRUU TƯỢNG
+
+=========Buoir 29=======================
+
+
+- implements: dùng cho triển khai từ  interface
+- Không thần thánh hóa
+
+OOP -> CÁCH  tư duy giảu quyết vấ đề
+function -> giải quyết vấn đề ok
+
+
+OOP
+    - Mô hình hóa các thành phần trong 1 ứng dụng
+
+    - Class <- xây dựng từ interface
+
+    - tính thừa kế : extends
+         class/ interface con sẽ mang tính đầy đủ tính chất cyar class cha
+
+    - Tính đa hình:
+         con mang thuộc tính của cha
+         có nhiều thể hiện (Hình thái) khác nhau
+
+         overwrite menthod
+
+         - Super -> goij các thuoock tính khác của class cha
+
+         - abstract class -> có thể trienr khai các methob
+         ex speaking(){
+            console.log("speaking ")
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
