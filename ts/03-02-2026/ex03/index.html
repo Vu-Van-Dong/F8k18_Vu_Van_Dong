@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+		<main></main>
+		
+		<script>
+			
+			
+			const rederCategories= ()=>{
+				const  categories=[
+					'quan ao',
+					'dienj thoai',
+					'do dien tu',
+					'da quy'
+				]
+				const mainElement=document.querySelector('main')
+				const ulElement=document.createElement('ul')
+				
+				categories.forEach(category=>{
+					const liElement=document.createElement('li')
+					liElement.textContent=category
+					
+					ulElement.appendChild(liElement)
+					
+				})
+				mainElement.append(ulElement)
+				
+			}
+			
+			rederCategories()
+			
+			
+		</script>
+		
+	</body>
+</html>

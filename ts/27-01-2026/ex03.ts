@@ -28,6 +28,9 @@ class Product implements ProductI{
         this.price = price
     }
 
+    getId: () => number
+    getPrice: () => string
+
     public getID(){
         return this.id;
     }
@@ -35,9 +38,9 @@ class Product implements ProductI{
         return this.name;
     }
 
-    public getPrice(){
-        return this.price;
-    }
+    // public getPrice(){
+    //     return this.price;
+    // }
 
     // getId: () => number
     // getName: () => string

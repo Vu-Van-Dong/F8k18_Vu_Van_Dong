@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		
+		<style>
+			.color--red{
+				color: red;
+			}
+			.color--green{
+				color: green;
+			}
+			.color--yellow{
+				color: yellow;
+			}
+			
+			.border--red{
+				border: 10px solid red;
+			}
+			
+			
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<h1>F8 học lạp trình </h1>
+		<p>ban muon mau chu la mau gi</p>
+		
+		<button id="reb-btn"  target-color="red"> Do</button>
+		<button id="green-btn" target-color="green"> xanh</button>
+		<button id="yellow-btn" target-color="yellow"> vang</button>
+		
+		 <script>
+			 const btns =Array.from(document.getElementsByTagName('button'))
+			 
+			 btns.forEach(btn => {
+				 btn.addEventListener('click', () => {
+					 const h1 =document.querySelector('h1')
+					 const targetColor = btn.getAttribute('target-color')
+					 
+					 h1.style.color = btn.getAttribute('target-color')
+				 })
+			 })
+			 
+			 
+			 
+			 // const rebBtn=document.querySelector('#reb-btn')
+			 // const greenBtn=document.querySelector('#green-btn')
+			 // const yellowBtn=document.querySelector('#yellow-btn')
+			 //
+			 // rebBtn.addEventListener('click',()=>{
+				//  const h1=document.querySelector('h1')
+				//  // h1.classList.add('color--red')
+				//  h1.style.color= 'red'
+				//  console.log('on click red btn')
+			 // })
+			 // greenBtn.addEventListener('click',()=>{
+				//  const h1=document.querySelector('h1')
+				//  // h1.classList.add('color--green')
+				//  h1.style.color= 'green'
+				//  console.log('on click green btn')
+			 // })
+			 // yellowBtn.addEventListener('click',()=>{
+				//  const h1=document.querySelector('h1')
+				//  // h1.classList.add('color--yellow')
+				//  h1.style.color= 'yellow'
+				//  console.log('on click yellow btn')
+			 // })
+			 //
+			 
+		 </script>
+		
+		
+	</body>
+</html>

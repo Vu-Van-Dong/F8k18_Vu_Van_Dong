@@ -1,0 +1,210 @@
+# Bản đồ kiến thức JS theo lớp (đầy đủ)
+
+```
+LỚP 1 — Nền tảng tư duy
+├── Biến: var, let, const — sự khác biệt và lý do tồn tại cả 3
+├── Kiểu dữ liệu: primitive (string, number, boolean, null, undefined, symbol, bigint)
+│   và reference (object, array, function)
+├── Type Casting: chuyển đổi kiểu dữ liệu
+│   ├── Implicit casting: JS tự chuyển — "5" + 1 = "51", "5" - 1 = 4
+│   ├── Explicit casting: Number(), String(), Boolean(), parseInt(), parseFloat()
+│   └── Truthy & Falsy: những giá trị nào JS coi là false (0, "", null, undefined, NaN)
+├── Toán tử: số học, so sánh (== vs ===), logic, nullish coalescing (??)
+├── Điều kiện: if/else, switch, ternary
+├── Vòng lặp: for, while, for...of, for...in — khi nào dùng cái nào
+├── Function: khai báo vs expression vs arrow function
+│   — sự khác biệt không chỉ là cú pháp
+└── Array & Object cơ bản: tạo, truy cập, thêm/xóa/sửa phần tử
+```
+
+Lớp này trông đơn giản nhưng có 2 chỗ hay bị dạy lướt:
+`==` vs `===` — học sinh hay được dặn "dùng === đi" mà không hiểu type coercion là gì, sau này gặp bug liên quan không debug được. `var` vs `let` — nếu không giải thích hoisting và function scope vs block scope ngay từ đây thì lớp 2 sẽ rất khó.
+
+---
+
+```
+LỚP 2 — Tư duy JS (JS nghĩ khác ngôn ngữ khác)
+├── Scope: global, function, block
+│   — biến sống ở đâu, chết ở đâu
+├── Hoisting: var được hoist khác function declaration
+│   — lý do code "chạy được" dù khai báo sau khi dùng
+├── Strict mode: "use strict" thay đổi hành vi JS
+│   — cấm dùng biến chưa khai báo, cấm duplicate parameter
+│   — this trong function thường trả về undefined thay vì global object
+│   — nền tảng để hiểu tại sao ES6 module mặc định là strict
+├── Closure: function nhớ scope nơi nó được tạo ra
+│   — không phải syntax trick, là cơ chế cơ bản của JS
+├── this: 4 quy tắc xác định this
+│   — implicit, explicit (call/apply/bind), new, arrow function
+├── Prototype & prototype chain
+│   — JS không có class thật sự, kế thừa qua prototype
+├── Classes: syntactic sugar trên prototype
+│   ├── constructor, method, static method
+│   ├── extends & super — kế thừa và gọi lên class cha
+│   ├── private field (#field) — thực sự private, khác với convention _field
+│   ├── getter & setter — kiểm soát cách đọc/ghi property
+│   └── class expression vs class declaration
+└── Array methods functional: map, filter, reduce, find, some, every, flat, flatMap
+    — tư duy xử lý dữ liệu không dùng vòng lặp thủ công
+```
+
+Đây là lớp nguy hiểm nhất. Closure và `this` là hai thứ học sinh hay gật đầu trong lớp rồi ra ngoài không dùng được. Cần bài tập kiểm tra mental model ở đây nhiều hơn bất kỳ lớp nào khác. Classes trông quen với người từ ngôn ngữ khác sang nhưng dễ tạo ảo giác hiểu — cần dạy song song với prototype để học sinh biết class chỉ là lớp bọc.
+
+---
+
+```
+LỚP 3 — Mô hình thực thi
+├── Call Stack: JS chạy từng dòng thế nào
+├── Heap: object được lưu ở đâu trong bộ nhớ
+├── Memory Management: JS tự quản lý bộ nhớ nhưng vẫn có thể leak
+│   ├── Garbage Collection: mark-and-sweep — object không còn được reference thì bị dọn
+│   ├── Memory leak phổ biến: global variable, closure giữ reference thừa,
+│   │   event listener không được remove, detached DOM node còn được JS giữ
+│   └── Cách phát hiện: dùng Memory tab trong DevTools để chụp heap snapshot
+├── Event Loop: tại sao JS không bị đơ khi chờ
+├── Task Queue vs Microtask Queue: setTimeout vs Promise chạy thứ tự nào
+├── Iterators & Generators
+│   ├── Iterator protocol: object có next() trả về {value, done}
+│   ├── Iterable protocol: object có [Symbol.iterator] — cho phép dùng for...of
+│   ├── Generator function (function*): tạo iterator bằng yield
+│   │   — chạy đến yield thì dừng, gọi next() mới chạy tiếp
+│   ├── Ứng dụng: lazy evaluation, xử lý data stream, infinite sequence
+│   └── Async generator: kết hợp async/await với generator cho data stream bất đồng bộ
+├── Callback: bất đồng bộ thế hệ đầu — và tại sao callback hell là vấn đề thật
+├── Promise: giải quyết callback hell
+│   — then/catch/finally, Promise.all, Promise.race, Promise.allSettled
+└── Async/Await: syntactic sugar của Promise
+    — nhìn như đồng bộ nhưng vẫn là bất đồng bộ bên dưới
+```
+
+Thứ tự callback → Promise → Async/Await không được đảo. Iterator và Generator hay bị bỏ qua vì trông trừu tượng — nhưng đây là nền tảng để hiểu for...of, spread operator, và sau này hiểu cách React/RxJS xử lý stream. Memory management cần dạy sớm hơn nhiều người nghĩ — leak bộ nhớ là bug khó tìm nhất trong app chạy lâu.
+
+---
+
+```
+LỚP 4 — Làm việc với môi trường trình duyệt
+├── DOM
+│   ├── ✅DOM tree: document là gì, node là gì
+│   ├── ✅Truy cập phần tử: querySelector, getElementById...
+│   ├── ✅Thêm/xóa/sửa phần tử: createElement, appendChild, innerHTML vs textContent
+│   ├── ✅Attribute vs Property: sự khác biệt quan trọng hay bị bỏ qua
+│   ├── ✅Traversal: parentNode, children, nextSibling...
+│   ├── ✅Event
+│   │   ├── addEventListener — cách gắn event đúng
+│   │   ├── Event object: target, currentTarget, preventDefault, stopPropagation
+│   │   ├── Event bubbling & capturing: tại sao click vào con lại trigger cha
+│   │   └── Event delegation: gắn 1 listener cho nhiều phần tử con
+│   └── Form
+│       ├── Truy cập giá trị: input.value, checkbox.checked, select.value
+│       ├── Attribute vs Property trong form: value ban đầu vs value hiện tại
+│       ├── Submit event: preventDefault để chặn reload trang
+│       │   — khác hoàn toàn với action trong HTML vì không gửi request mới
+│       ├── Validation: checkValidity, setCustomValidity, reportValidity
+│       │   — validation bằng JS thay vì dựa hoàn toàn vào HTML attribute
+│       ├── FormData API: đọc toàn bộ form một lúc, hỗ trợ file upload
+│       └── Reset form: reset(), và sự khác biệt giữa reset value vs clear value
+│
+├── BOM (Browser Object Model)
+│   ├── window object: global object của trình duyệt — mọi biến global đều là property của window
+│   ├── window.location: URL hiện tại, điều hướng trang
+│   │   — href, pathname, search, hash, origin
+│   │   — location.assign(), replace(), reload()
+│   ├── window.history: điều hướng không reload trang
+│   │   — history.pushState(), replaceState() — nền tảng của client-side routing
+│   │   — history.back(), forward(), go()
+│   ├── window.navigator: thông tin về trình duyệt và thiết bị
+│   │   — userAgent, language, onLine, geolocation, clipboard
+│   ├── window.screen: thông tin màn hình vật lý
+│   │   — width, height, availWidth — khác với viewport
+│   ├── window.innerWidth / innerHeight: kích thước viewport hiện tại
+│   │   — thay đổi khi resize, khác với screen.width
+│   ├── Timers: setTimeout, setInterval, clearTimeout, clearInterval
+│   │   — chạy trong event loop, không phải chạy đúng giờ tuyệt đối
+│   ├── window.alert / confirm / prompt: dialog đồng bộ, block UI
+│   │   — tránh dùng trong production
+│   └── window.open / close: mở tab/popup mới — bị chặn nếu không từ user gesture
+│
+├── Browser Storage
+│   ├── Cookie: lưu trên client, gửi kèm mọi HTTP request
+│   │   — path, domain, expires, httpOnly, secure, SameSite
+│   ├── localStorage: lưu vĩnh viễn, chỉ đọc được bằng JS cùng origin
+│   ├── sessionStorage: mất khi đóng tab
+│   ├── IndexedDB: database thật sự trong trình duyệt
+│   │   — dùng khi cần lưu lượng lớn hoặc cần query phức tạp
+│   └── Cache API: lưu response HTTP — dùng trong Service Worker
+│       — nền tảng của PWA và offline-first
+│
+├── Giao tiếp với server
+│   ├── XHR (XMLHttpRequest): API gốc, cũ, vẫn cần biết để đọc code legacy
+│   │   — event-based, verbose, không dùng Promise natively
+│   ├── Fetch API: thay thế XHR, Promise-based, clean hơn
+│   │   — Request, Response, Headers object
+│   │   — fetch không throw khi 4xx/5xx, chỉ throw khi network fail
+│   └── Axios & thư viện khác: wrapper trên XHR/Fetch
+│       — tự động parse JSON, interceptor, cancel request
+│
+└── Browser DevTools
+    ├── Console: log, warn, error, table, group, time — không chỉ là console.log
+    ├── Elements tab: inspect DOM thật sự đang render, khác với source HTML
+    ├── Sources tab: đặt breakpoint, step through code, watch variable
+    ├── Network tab: xem request/response, timing, header, payload
+    │   — debug fetch/XHR, kiểm tra cookie được gửi đi không
+    ├── Memory tab: heap snapshot, phát hiện memory leak
+    ├── Performance tab: flame chart, tìm bottleneck render và JS execution
+    └── Application tab: xem và chỉnh sửa localStorage, sessionStorage, cookie, IndexedDB
+```
+
+DevTools hay bị dạy như phần phụ "dùng khi cần" — nhưng thực ra là kỹ năng cốt lõi. Học sinh biết dùng Sources tab để debug sẽ tìm bug nhanh hơn 10 lần so với chỉ dùng console.log. Nên dạy song song với các phần khác, không để cuối.
+
+---
+
+```
+LỚP 5 — Kiến trúc và pattern
+├── OOP trong JS: class (syntactic sugar), constructor, extends, super
+│   — nhưng bên dưới vẫn là prototype
+├── Functional programming: pure function, immutability, function composition
+├── Data Structures trong JS
+│   ├── Map: key-value, key có thể là bất kỳ kiểu nào — khác Object
+│   │   — có size, iterable, không có key thừa từ prototype
+│   ├── Set: tập hợp không trùng lặp, dùng để dedup array
+│   ├── WeakMap & WeakSet: giữ reference yếu, không ngăn garbage collection
+│   │   — dùng để lưu metadata gắn với object mà không gây memory leak
+│   └── Stack, Queue, LinkedList: tự implement bằng array hoặc class
+│       — hiểu khi nào dùng cấu trúc nào thay vì mặc định dùng array
+├── Module pattern: tổ chức code tránh pollute global scope
+├── Observer pattern: nền tảng của event system và reactive programming
+├── Error handling: try/catch/finally, custom Error class
+│   — xử lý lỗi trong async code (unhandled rejection)
+└── Immutability patterns: spread operator, Object.freeze
+    — tránh side effect không mong muốn
+```
+
+---
+
+```
+LỚP 6 — Hệ sinh thái
+├── NPM: package.json, dependencies vs devDependencies, scripts
+├── Module system: CommonJS (require) vs ESM (import/export)
+│   — tại sao có 2 hệ thống và chúng khác nhau thế nào
+├── Bundler: Vite/Webpack — tại sao cần bundle, tree shaking, code splitting
+├── Node.js: JS chạy ngoài trình duyệt
+│   — event-driven server, fs, path, http module
+├── WebSocket: kết nối hai chiều thật sự
+├── Framework: React/Vue/Svelte — mỗi cái giải quyết vấn đề gì
+└── TypeScript: type system trên nền JS
+```
+
+---
+
+## Những phụ thuộc cứng không được phá
+
+- Scope → Closure → `this` → OOP
+- Prototype → Classes — không được dạy class mà bỏ qua prototype
+- Callback → Promise → Async/Await
+- Iterator protocol → Generator → Async Generator
+- Call Stack + Event Loop → hiểu được bất đồng bộ thật sự
+- Heap + Garbage Collection → Memory leak → DevTools Memory tab
+- DOM cơ bản → Event → Event delegation
+- Fetch/XHR → Cookie/Storage → Auth flow
+- Function thành thạo → Array methods → Functional programming
+- Map/Set → WeakMap/WeakSet → hiểu memory leak qua reference

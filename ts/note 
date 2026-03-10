@@ -46,8 +46,19 @@ OOP
          }
 
 
+=========================
 
 
+buổi 30 =====31-01-2026
+
+
+- protected : dungf tương tự private , nhưng gọi đến con mà private không gọi đén được
+
+- obverver pattern
+
+- js/ts module
+    -> code quá lớn/lộn xộn
+    ->
 
 
 
