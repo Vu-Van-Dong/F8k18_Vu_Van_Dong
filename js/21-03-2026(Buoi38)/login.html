@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+	
+		<H2>Đăng nhập</H2>
+		
+		
+		<input type="email" placeholder="Email" id="email">
+		<input type="password" placeholder="Password" id="password">
+		<button id="btnlogin">Login</button>
+		<p id="error" style="color: #751b1b"></p>
+		<script type="module">
+			const btn = document.getElementById("btnlogin")
+			btn.onclick = async()=>{
+				const email = document.getElementById("email").value
+				const password = document.getElementById("password").value
+				
+				try {
+					await login(email, password)
+					window.location.href="/"                     ///////////////////////////
+					
+				}catch (err){
+					document.getElementById('error').innerHTML = err.message
+				}
+			}
+			x`x`
+			
+		</script>
+		
+	</body>
+</html>
