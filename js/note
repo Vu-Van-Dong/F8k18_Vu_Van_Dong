@@ -1,0 +1,386 @@
+
+
+
+
+==============Buoi 20: 27-12-2025
+
+
+    JS(javaStript ) là ngôn ngữ lập trình
+        - ra đời với mục đích làm fe
+        hiện tại js có thể làm fe , be , cicd, AI
+
+
+    JS(javaStript):
+    - Ưu điểm : triển khai nhanh , dễ codde
+    - Nhược điểm :
+        + Không tường minh -> khó bảo trì
+        + Khi code sai -> không biết ngay được
+        + Không hỗ trợ lập trình hướng đối tượng
+
+
+
+    JS (typeStript) ra đời để giải duyết hầu hết các nhược điểm
+        -> có những nét tương đồng với java
+
+
+    -  In gía trị ra màn hình thì dùng
+        console.log('Gia trị ');
+
+
+
+     - Biến *varliable +++===========
+
+    - dùng để lưu tạm thời các giá trị nào đó
+
+        const / let / var <tên biến> =<Giá trị >
+
+
+
+    - Phân biệt các kiến thức const /lef / var
+
+        + const a = 1: khai báo biến a và gán cho biến a giatri bằng 1
+        a = 2 -> update giá trị cua biến a
+
+
+    **Data *type*****
+
+
+    number
+        - int : 1 2 3
+        - float :
+    bool (true /false )
+        - công thức ddath tên : is/are/have /has + tính từ
+            ex: is_number: true
+
+    string
+        ex: fghjkl
+
+    object
+        - array [matrix]
+            ex: [1 23 6561]
+
+        dictiomary (key -value )
+            ex: {
+                "hecllooo:  " "xin chao "
+
+
+            }
+
+
+
+
+    =======Ep kiểu dữ liệu ===============
+
+    const a = 1000
+    convert
+        1000 -> "1000"  -> ok
+        "1000" -> 1000
+
+
+==================================Buoi 21================
+
+number.length  lấy độ dài của mảng  (total elements )
+
+numbers = [ 4,3,1,5,11]
+
+cost number = [1 ,2,3,4,5,1000]
+
+// number = 0x01
+
+const copieNumbers= numbers
+// copie_Number = 0x01
+
+copienumber[1] = 2000
+//copieNumbers[index]
+
+coopieNumber have been changed -> number changed
+
+
+
+=========================Toans tử =============================
+
+
+- chuỗi + chuỗi -> chuỗi
+        + -> "1"+ "1" -> "11"
+
+        */- ưu tiên ép kiểu về số được , nếu không ép kiểu (convert) được chuyển hét ssang String
+
+
+
+/// bool
+
+- Phép hội  / Tuyển
+    and    / or
+
+    //Phép hội  đôi chỉ đúng khi cả 2 số cũng đúng
+    // phép tuyển chỉ sai khi 2 số cùng sai
+
+const a = true
+   -> !a= false  ( sai cuar a )
+
+   !(3 >1) and 2<1 -> false
+   3<1 or !(2<1) -> true
+
+
+   c = and b
+   !a and !b   -> C
+
+
+
+
+=================== buổi 22==03-01-2026=================
+/* JS có 8 kiểu dữ liệu
+* 7 kiểu dũ liệu nguyên thủy
+*- String
+*- Number
+*- Boolean
+*- Underfined
+*-Null
+*-BigInt
+*-Symbol
+*- 1 kiểu dữ liệu tham chiếu
+*-Object
+*-
+
+
+
+* Đặc điểm: không thể thay đổi giá trị. Nguocj lại giá trị tham chiếu có thế thay đổi giá trị
+
+
+
+*- Caau lệnh rẽ nhánh
+
+1.If
+2.If else
+3. if else if
+4. switch case
+
+
+// toans tử so sanhsb
+  1. == chỉ so sánh giá trị không so sánh kiểu dữ liệu
+  2. === so sáng cả giá trị và kiểu dữ liệu
+  3. != SO sánh mình hía trrij
+  3. !== so sánh cả giá trị cả kiểu dữ liêu
+
+
+
+
+/// Hàm
+1. hàm khai báo Declaration Function
+    tên hàm(){
+        lệnh
+    }
+    lời gọi hàm .
+
+
+2. hàm biểu thức
+ 3. hàm mũi tên
+
+ 4. IIFE (biểu thức thực thi hàm ngay lập tức )
+    cu phap: ( function ten ham (){
+    lenh
+    })()
+
+
+
+
+=========Buoo 23==06-01-2026===================
+
+function demo(){
+
+
+}
+
+demo: tenham
+(a ,b ) -> a,b la gia tri
+()
+
+->np param
+{} -> conten
+
+demo() -> loi goi ham
+
+
+function demo2(){
+		console.log("hello world")
+		return 1
+}
+demo2()
+
+-> no input ,output =1
+
+function demo3(x){
+		return x
+}
+
+f(x) = x
+x is param
+
+demo3(100)
+
+100-> ardument
+
+
+
+const demo4 =() => 2*8
+const d4 = demo4()
+
+
+
+=== Callback is arg, but this arg is fuct
+(ban chất là lời gọi hàm,  đối số)
+
+
+    arrow func do not have "this"
+    "This" is not working with arrow func (hàm => khong dùng được với "This")
+
+
+====================Buoi 24=10-1-2026============
+
+
+loop: vòng lặp
+thực hiện đi thực hiện lại 1 việc nào đó
+
+
+    - for in
+    -for of
+    - forEach
+    - white
+
+
+    avance
+    - map
+    - filter
+    - reduce
+
+
+
+console.log(!Array.isArray(ten bienes )): Kiểm tra có phải maảng hay không
+
+
+
+================= Buoi 25. 2025-01-13============
+
+- Tham chiếu - reference
+
+
+
+=============================Buổi 26==============
+
+white (ddieeuf kiện hoạt động){
+    lệnh
+}
+
+
+    push(): Thêm một phần tử mới vào cuối mảng.
+
+    pop(): Xóa phần tử cuối cùng khỏi mảng., và trả về .....
+
+    shift(): Xóa phần tử đầu tiên khỏi mảng.
+
+    unshift(): Thêm một phần tử mới vào đầu mảng.
+
+    splice(): Thêm hoặc xóa phần tử tại một vị trí (index) cụ thể.
+
+    sort(): Sắp xếp thứ tự các phần tử trong mảng.
+
+
+
+
+includes
+    - array.includes(<element>)
+        -> true / false
+    - use to check existing element
+    - check substring
+      const productName = 'Gạo ST25 (5kg)'
+      console.log(productName.includes('gạo'))
+
+find
+    - use when you make sure the result only 1 elementrs
+    - base on loop (forEach) -> O(n)
+    - return only 1 element if callback func return true
+    - return undefined if callback func return false
+
+-> find by name, price > 1000
+-> many elements
+
+filter
+
+================================================
+
+Buổi 27 ngày 24/01/2026
+
+
+- toLowerCase(: chuyển thành chưx thường
+- replaceAll ('a ','b') thay đổi kí tưj a bằng kí tự b
+-trim() : loaij bor khảng trắng dầu cuối
+            name= name.trim()
+
+
+- filter: laays ra các ojc có boole là TRue
+
+string
+
+
+
+const a ={
+		id: 1,
+		name:'A',
+}
+
+// add address
+a.address = 'Ha Noi'
+
+// const b = a
+//
+// b.name = 'B'
+
+
+const b = JSON.parse(JSON.stringify(a))
+
+--> deep coppy
+
+
+
+-----------------
+
+typeStript: javaStript + type
+
+
+
+
+
+interface employee {
+    id: number
+    name: string
+    salary?: number
+}
+
+- Dấu ? thức là salary có thể có hoặc không
+- salary: number || null
+
+
+
+
+
+
+
+
+
+
+
+- OOP:
+    - TINHS KẾ THỪA
+    - TÍNH ĐA HÌNH
+    - TÍNH ĐÓNG GÓI
+    - TÍNH TRUU TƯỢNG
+
+=========Buoir 20
+
+
+
+
+
+
+
+

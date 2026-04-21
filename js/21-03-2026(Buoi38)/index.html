@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<h2>Trang chủ</h2>
+
+<!-- Hiển thị thông tin user -->
+<div id="user"></div>
+
+<!-- Nút logout -->
+<button id="logoutBtn">Logout</button>
+
+<script type="module">
+	// Import các hàm cần dùng
+	import { getProfile, logout, isLoggedIn } from "./auth.js";
+	
+	// Nếu chưa login → redirect về login
+	if (!isLoggedIn()) {
+		window.location.href = "login.html";
+	}
+	
+	// Lấy div hiển thị user
+	const userDiv = document.getElementById("user");
+	
+	// Hàm load user
+	async function loadUser() {
+		try {
+			// Gọi API lấy profile
+			const user = await getProfile();
+			
+			// Render thông tin user ra HTML
+			userDiv.innerHTML = `
+        <p>ID: ${user.id}</p>
+        <p>Email: ${user.email}</p>
+        <p>Name: ${user.name}</p>
+      `;
+		} catch (err) {
+			// Log lỗi nếu có
+			console.log(err);
+		}
+	}
+	
+	// Gọi hàm load user khi vào trang
+	loadUser();
+	
+	// Gắn sự kiện logout
+	document.getElementById("logoutBtn").onclick = logout;
+</script>
