@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: f8-k18-fullstack-web
+    image: node:25
+    working_dir: /app/web
+    volumes:
+      - ./web:/app/web
+    ports:
+      - "3000:3000"
+    command: npm run dev
